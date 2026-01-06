@@ -136,21 +136,9 @@ npm run test:e2e    # run e2e tests
 npm run test:watch  # watch mode
 ```
 
-Como contribuir
-
-- Abra uma issue descrevendo o que deseja alterar.
-- Crie um branch, faça alterações e submeta um PR com descrição clara.
-
 Links úteis
 
 - Código da aplicação: [src](src)
 - Entrypoints: [src/app.ts](src/app.ts) / [src/server.ts](src/server.ts)
 - Prisma schema: [prisma/schema.prisma](prisma/schema.prisma)
 - OpenAPI: [docs/openapi.yaml](docs/openapi.yaml) — UI em `/docs`
-
-Contato
-
-- Projeto exemplo criado para fins didáticos.
-
------
-Gerado automaticamente a partir da análise do código do repositório.
