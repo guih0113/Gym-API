@@ -1,0 +1,12 @@
+node_modules
+.git
+.env
+.env.local
+.DS_Store
+coverage
+.vitest
+*.spec.ts
+*.spec.js
+src/**/*.spec.ts
+prisma/vitest-environment-prisma
+README.md

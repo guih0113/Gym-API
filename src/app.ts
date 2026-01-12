@@ -1,5 +1,6 @@
 import path from "node:path";
 import fastifyCookie from "@fastify/cookie";
+import fastifyCors from "@fastify/cors";
 import fastifyJwt from "@fastify/jwt";
 import fastifySwagger from "@fastify/swagger";
 import fastifySwaggerUi from "@fastify/swagger-ui";
@@ -11,6 +12,11 @@ import { gymsRoutes } from "./http/controllers/gyms/routes";
 import { usersRoutes } from "./http/controllers/users/routes";
 
 export const app = fastify();
+
+app.register(fastifyCors, {
+	origin: true, // permite requisições de qualquer origem
+	credentials: true, // permite envio de cookies
+});
 
 app.register(fastifyJwt, {
 	secret: env.JWT_SECRET,
