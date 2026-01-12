@@ -1,11 +1,8 @@
-import { app } from '../src/app'
-import { env } from '../src/env'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
+// @ts-ignore
+import { app } from '../build/app'
 
-export default app
-
-app.listen({
-  host: '0.0.0.0',
-  port: env.PORT,
-}).then(() => {
-  console.log('🚀 HTTP Server Running!')
-})
+export default async (req: VercelRequest, res: VercelResponse) => {
+  await app.ready()
+  app.server.emit('request', req, res)
+}
