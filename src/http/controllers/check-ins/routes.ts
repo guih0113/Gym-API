@@ -1,4 +1,4 @@
-import { verifyJWT } from '@/http/middlewares/verfify-jwt'
+import { verifyJWT } from '@/http/middlewares/verify-jwt'
 import { verifyUserRole } from '@/http/middlewares/verify-user-role'
 import { FastifyInstance } from 'fastify'
 import { create } from './create'
