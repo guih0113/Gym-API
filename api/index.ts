@@ -1,6 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-// @ts-ignore
-import { app } from '../build/app'
+import { app } from '../src/app.js'
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   await app.ready()
